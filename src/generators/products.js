@@ -11,11 +11,15 @@ function createProduct() {
   };
 }
 
-exports.createProductList = function createProductList(length = 10) {
-  const resp = [];
+function createProductList(length = 10) {
+  const pList = [];
   for (let i = 0; i < length; i++) {
-    let temp = createProduct();
-    resp.push(temp);
+    pList.push(createProduct());
   }
-  return resp;
+  return pList;
+}
+
+module.exports = {
+  createProduct,
+  createProductList,
 };

@@ -8,9 +8,8 @@
     "start": "node server.js"
   },
   "dependencies": {
-    "faker": "^4.1.0",
-    "faker-cli": "^2.0.0",
-    "json-server": "^0.16.1"
+    "faker": "^5.1.0",
+    "json-server": "^0.16.2"
   },
   "repository": {
     "type": "git",
