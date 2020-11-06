@@ -1,0 +1,26 @@
+{
+  "name": "fake-store",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node src/index.js",
+    "start": "json-server --watch db.json"
+  },
+  "dependencies": {
+    "faker": "^4.1.0",
+    "faker-cli": "^2.0.0",
+    "json-server": "^0.16.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EdisonPeM/fake-store.git"
+  },
+  "keywords": [],
+  "author": "Edison Peñuela <edisonpe961206@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/EdisonPeM/fake-store/issues"
+  },
+  "homepage": "https://github.com/EdisonPeM/fake-store#readme"
+}
