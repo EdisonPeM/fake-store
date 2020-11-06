@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "node src/index.js",
-    "start": "json-server --watch db.json"
+    "start": "node server.js"
   },
   "dependencies": {
     "faker": "^4.1.0",
