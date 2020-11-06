@@ -1,4 +1,4 @@
-const faker = require('faker/locale/es');
+const faker = require('faker');
 
 function createProduct() {
   return {
@@ -11,11 +11,15 @@ function createProduct() {
   };
 }
 
-exports.createProductList = function createProductList(length = 10) {
+function createProductList(length = 10) {
   const resp = [];
   for (let i = 0; i < length; i++) {
-    let temp = createProduct();
-    resp.push(temp);
+    resp.push(createProduct());
   }
   return resp;
+}
+
+module.exports = {
+  createProduct,
+  createProductList,
 };
