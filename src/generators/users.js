@@ -1,5 +1,4 @@
 const faker = require('faker/locale/es');
-const { fake } = require('faker/locale/es');
 
 function createUser() {
   return {
@@ -7,6 +6,7 @@ function createUser() {
     name: faker.name.firstName(),
     lastName: faker.name.lastName(),
     gender: faker.name.gender(),
+    phone: faker.phone.phoneNumber(),
     userName: faker.internet.userName(),
     avatar: faker.internet.avatar(),
     email: faker.internet.email(),
