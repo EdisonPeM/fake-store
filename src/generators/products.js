@@ -5,7 +5,13 @@ function createProduct() {
     id: faker.random.uuid(),
     type: faker.commerce.product(),
     name: faker.commerce.productName(),
-    price: +faker.commerce.price(),
+    image: faker.random.arrayElement([
+      faker.image.unsplash.objects,
+      faker.image.lorempixel.food,
+      faker.image.unsplash.technology,
+      faker.image.lorempixel.fashion,
+    ])(),
+    price: faker.random.number(),
     color: faker.commerce.color(),
     department: faker.commerce.department(),
   };
