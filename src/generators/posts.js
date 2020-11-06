@@ -1,7 +1,7 @@
 const faker = require('faker/locale/es');
 
 function createPost() {
-  const postName = faker.lorem.slug().split('-').join(' ');
+  const postName = faker.lorem.slug();
   return {
     id: postName,
     title: postName.split('-').join(' '),
