@@ -7,6 +7,7 @@ const companyGen = require('./Generators/companies');
 const vehicleGen = require('./Generators/vehicles');
 const clientGen = require('./Generators/clients');
 const postGen = require('./Generators/posts');
+const michiGen = require('./Generators/michis');
 
 const generatedData = {
   singleUser: userGen(),
@@ -16,6 +17,7 @@ const generatedData = {
   vehicles: generate(vehicleGen, 50),
   clients: generate(clientGen, 20),
   posts: generate(postGen, 7),
+  michis: generate(michiGen, 50),
 };
 
 fs.writeFileSync('db.json', JSON.stringify(generatedData, null, '\t'));
