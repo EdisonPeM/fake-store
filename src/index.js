@@ -1,20 +1,23 @@
 const fs = require('fs');
 const generate = require('./lib/Generator');
 
-const userModel = require('./Models/users');
-const productModel = require('./Models/products');
-const companieModel = require('./Models/companies');
-const vehicleModel = require('./Models/vehicles');
-const clientModel = require('./Models/clients');
-const postModel = require('./Models/posts');
+const userGen = require('./Generators/users');
+const productGen = require('./Generators/products');
+const companyGen = require('./Generators/companies');
+const vehicleGen = require('./Generators/vehicles');
+const clientGen = require('./Generators/clients');
+const postGen = require('./Generators/posts');
+const michiGen = require('./Generators/michis');
 
 const generatedData = {
-  users: generate(userModel),
-  products: generate(productModel, 100),
-  companies: generate(companieModel, 10),
-  vehicles: generate(vehicleModel, 50),
-  clients: generate(clientModel, 20),
-  posts: generate(postModel, 7),
+  singleUser: userGen(),
+  users: generate(userGen),
+  products: generate(productGen, 100),
+  companies: generate(companyGen, 10),
+  vehicles: generate(vehicleGen, 50),
+  clients: generate(clientGen, 20),
+  posts: generate(postGen, 7),
+  michis: generate(michiGen, 50),
 };
 
 fs.writeFileSync('db.json', JSON.stringify(generatedData, null, '\t'));
