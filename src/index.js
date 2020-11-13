@@ -8,9 +8,11 @@ const vehicleGen = require('./Generators/vehicles');
 const clientGen = require('./Generators/clients');
 const postGen = require('./Generators/posts');
 const michiGen = require('./Generators/michis');
+const studentGen = require('./Generators/students');
 
 const generatedData = {
   singleUser: userGen(),
+  students: generate(studentGen, 30),
   users: generate(userGen),
   products: generate(productGen, 100),
   companies: generate(companyGen, 10),
